@@ -148,7 +148,7 @@ a{
 				display: flex;
 				align-items: center;
 				img{
-					height: 30px;
+					height: 46px;
 				}
 			}
 		}
@@ -184,18 +184,20 @@ a{
 					display: flex;
 					align-items: center;
 					li{
+						width: calc(100% + 35px);
 						a{
 							height: 75px;
 							display: flex;
 							align-items: center;
-							font-weight: bold;
+							font-weight: normal;
 							padding: 0 10px;
 							line-height: 1;
 							font-size: 14px;
 							border-bottom: 2px solid #fff;
-							transition: .4s all;
+
 							&:hover{
 								border-bottom: 2px solid $black;
+								font-weight: bold;
 							}
 						}
 						&:hover{
@@ -275,7 +277,7 @@ a{
 						border: none;
 						outline: transparent;
 						width: 280px;
-						border: 1px solid rgb(204, 204, 204);
+						border-bottom: 1px solid #041423;
 						font-size: 14px;
 						padding: 10px 10px;
 						font-weight: 400;
