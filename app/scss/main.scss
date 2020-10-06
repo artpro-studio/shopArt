@@ -22,10 +22,11 @@ a{
 }
 .header{
 	.top{
-		border-bottom: 1px solid rgb(238, 238, 238);
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		padding: 30px 0;
+		padding-bottom: 0;
 		.left{
 			display: flex;
 			a{
@@ -72,7 +73,7 @@ a{
 					width: 1px;
 					background-color: $black;
 					position: absolute;
-					top: 2px;
+					top: 0px;
 					right: -12px;
 				}
 			}
@@ -281,10 +282,11 @@ a{
 						font-size: 14px;
 						padding: 10px 10px;
 						font-weight: 400;
-						font-family: 'Noto Sans', sans-serif;
+						font-family: 'IBM Plex Sans', sans-serif;
 						&::placeholder{
 							font-size: 14px;
-							font-family: 'Noto Sans', sans-serif;
+							font-family: 'IBM Plex Sans', sans-serif;
+							color: $black;
 						}
 					}
 					button{
