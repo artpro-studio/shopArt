@@ -306,6 +306,87 @@ a{
 	}
 }
 
+.main-banner--item {
+	height: 545px;
+	position: relative;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+	&:before {
+		position: absolute;
+		content: '';
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		background: linear-gradient(90deg, rgba(21, 21, 21, 0.57) 43.65%, rgba(21, 21, 21, 0) 100.08%);
+	}
+}
+
+.main-banner--info {
+	z-index: 2;
+	color: #ffffff;
+	position: absolute;
+	bottom: 85px;
+	margin-left: 120px;
+}
+
+.main-banner--title {
+	font-weight: 300;
+	font-size: 44px;
+	line-height: 42px;
+	margin-bottom: 24px;
+}
+
+.main-banner--desc {
+	font-weight: 300;
+	font-size: 20px;
+	line-height: 29px;
+	margin-bottom: 66px;
+	width: 60%;
+}
+
+.main-banner--show {
+	display: flex;
+	align-items: center;
+
+	a {
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 26px;
+		display: flex;
+		align-items: center;
+		text-decoration-line: underline;
+		color: #ffffff;
+		margin-right: 20px;
+	}
+}
+
+.main-banner--dots {
+	position: absolute;
+	content: '';
+	right: 100px;
+	bottom: 88px;
+	list-style-type: none;
+	display: flex;
+
+	button {
+		display: none;
+	}
+
+	li {
+		width: 7px;
+		height: 7px;
+		background: rgba(255, 255, 255, 0.5);
+		margin-right: 5px;
+	}
+
+	li.slick-active {
+		background: #FFFFFF;
+	}
+}
+
 
 
 
