@@ -1,5 +1,6 @@
 $(function() {
-
-	// Custom JS
+    $('.openSearch').on('click', function () {
+        $('.search').toggleClass('active')
+    });
 
 });

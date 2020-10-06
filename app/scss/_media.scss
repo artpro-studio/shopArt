@@ -1,34 +1,120 @@
 @import "vars";
 
-
-/*==========  Desktop First  ==========*/
-
-// ≥1200px
-@media screen and (min-width:1200px){
-
-}
-
-// ≥992px
-@media screen and (min-width:992px){
-
-}
-
-// ≥768px
-@media screen and (min-width:768px){
-
-}
-
-// ≥576px
-@media screen and (min-width:576px){
-
-}
-
-
 /*==========  Mobile First  ==========*/
 
-// ≤576px
-@media screen and (max-width:576px){
+// ≤1200px
+@media screen and (max-width:1350px){
+  .header{
+    &__content{
+      .menu{
+        nav{
+          ul{
+            li{
+              a{
+                font-size: 13px;
+              }
+            }
+          }
+        }
+      }
+      .search{
+        form{
+          .field{
+            input{
+              width: 180px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// ≤1200px
+@media screen and (max-width:1220px){
+  .header{
+    .cart, .like{
+      margin-right: 15px;
+      padding-right: 0;
+    }
+    &__content{
+      .logo{
+        a{
+          img{
+            height: 25px;
+          }
+        }
+      }
+      .menu nav ul li a{
+        padding: 0px 5px;
+        font-size: 12px;
+      }
+      .search form .field input{
+        width: 165px;
+      }
+    }
+  }
+  .container{
+    padding: 0px 15px;
+  }
+}
 
+// ≤992px
+@media screen and (max-width:992px){
+  .header{
+    position: relative;
+    .top{
+      display: none;
+    }
+    &__content{
+      padding: 15px 0;
+      .menu{
+        display: none;
+      }
+      .logo{
+        .burger{
+          display: flex;
+        }
+      }
+      .search{
+        display: none;
+        &.active{
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          background-color: #fff;
+          height: 100%;
+          z-index: 2;
+          form{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            .field{
+              padding-left: 20px;
+              width: 100%;
+              input{
+                border: none;
+                border-bottom: 1px solid #ccc;
+                width: 100%;
+              }
+              button{
+                left: 0;
+                svg{
+                  rect{
+                    fill: $blue;
+                  }
+                  ellipse{
+                    stroke: rgb(51, 153, 204);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 // ≤768px
@@ -36,12 +122,13 @@
 
 }
 
-// ≤992px
-@media screen and (max-width:992px){
+// ≤576px
+@media screen and (max-width:576px){
 
 }
 
-// ≤1200px
-@media screen and (max-width:1200px){
 
-}
+
+
+
+
