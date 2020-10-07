@@ -101,10 +101,10 @@
 // ≤992px
 @media screen and (max-width:992px){
   body{
-    padding-top: 137px;
-    padding-bottom: 101px;
+    padding-top: 142px;
   }
   .header{
+    padding-bottom: 5px;
     .top{
       padding-right: 15px;
       .right{
@@ -205,9 +205,9 @@
 @media screen and (max-width:850px){
   body{
     padding-top: 70px;
-    padding-bottom: 150px;
   }
   .header{
+    padding-bottom: 0;
     .top{
       display: none;
     }
@@ -290,7 +290,7 @@
 // ≤576px
 @media screen and (max-width:650px){
   body{
-    padding-top: 50px;
+    padding-top: 60px;
   }
   .header{
     &__content{
@@ -307,6 +307,11 @@
     &__content{
       .logo{
         margin-right: 15px;
+        a{
+          img{
+            height: 18px;
+          }
+        }
       }
       .menu{
         ul{
@@ -314,7 +319,7 @@
             margin: 0;
             margin-bottom: 5px;
             a{
-              font-size: 10px;
+              font-size: 8px;
             }
           }
         }
@@ -324,7 +329,6 @@
           margin-bottom: 10px;
         }
         .f_text{
-          width: 144px;
           text-align: right;
           p{
             font-size: 10px;
