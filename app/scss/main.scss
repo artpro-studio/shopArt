@@ -811,7 +811,7 @@ a{
 	column-count: 3;
 	column-gap: 1em;
 }
-.main-banner--item {
+.main-banner__item {
 	height: 545px;
 	position: relative;
 	background-repeat: no-repeat;
@@ -829,7 +829,7 @@ a{
 	}
 }
 
-.main-banner--info {
+.main-banner__info {
 	z-index: 2;
 	color: #ffffff;
 	position: absolute;
@@ -837,14 +837,14 @@ a{
 	margin-left: 120px;
 }
 
-.main-banner--title {
+.main-banner__title {
 	font-weight: 300;
 	font-size: 44px;
 	line-height: 42px;
 	margin-bottom: 24px;
 }
 
-.main-banner--desc {
+.main-banner__desc {
 	font-weight: 300;
 	font-size: 20px;
 	line-height: 29px;
@@ -852,7 +852,7 @@ a{
 	width: 60%;
 }
 
-.main-banner--show {
+.main-banner__show {
 	display: flex;
 	align-items: center;
 
@@ -868,7 +868,7 @@ a{
 	}
 }
 
-.main-banner--dots {
+.main-banner__dots {
 	position: absolute;
 	content: '';
 	right: 100px;
@@ -892,6 +892,86 @@ a{
 	}
 }
 
+.main-works {
+	position: relative;
+	padding: 95px 0 77px 0;
 
+	&__title {
+		font-weight: 300;
+		font-size: 32px;
+		line-height: 42px;
+		color: $grey;
+		text-align: center;
+		margin-bottom: 50px;
+		position: relative;
+
+		&:before {
+			position: absolute;
+			content: '';
+			top: -51px;
+			left: 50%;
+			width: 50px;
+			height: 25px;
+			background-image: url("../img/arrowUp.svg");
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center;
+		}
+	}
+
+	&__items {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: relative;
+		.slick-list {
+			width: 100%;
+		}
+	}
+
+	&__item {
+		padding: 0 10px;
+	}
+
+	&__item-img {
+		display: block;
+		margin-bottom: 38px;
+
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__item-title {
+		font-size: 24px;
+		line-height: 31px;
+		margin-bottom: 26px;
+		color: #000000;
+	}
+
+	&__item-link {
+		font-weight: bold;
+		font-size: 14px;
+		line-height: 18px;
+		text-decoration-line: underline;
+		color: #000000;
+	}
+
+	.next-arrow {
+		position: absolute;
+		content: '';
+		width: 18px;
+		height: 14px;
+		bottom: 96px;
+		right: calc(50% - 120px);
+		background-image: url(../img/arrowNext.svg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		background-color: transparent;
+		border: none;
+	}
+}
 
 @import "media"; // Always at the end

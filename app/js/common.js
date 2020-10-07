@@ -24,6 +24,23 @@ $(function() {
         prevArrow: '',
         nextArrow: '',
         dots: true,
-        dotsClass: 'main-banner--dots'
+        dotsClass: 'main-banner__dots'
     });
+    $('.js--main-works__items').slick({
+        arrows: false,
+        slidesToShow: 3,
+        responsive: [
+            {
+                breakpoint: 651,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    arrows: true,
+                    prevArrow: '',
+                    nextArrow: 	'<button class="next-arrow"></button>'
+            }
+            },
+        ]
+    })
 });

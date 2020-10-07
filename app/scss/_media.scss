@@ -60,24 +60,24 @@
 }
 
 @media screen and (max-width: 960px) {
-  .main-banner--item {
+  .main-banner__item {
     height: 356px;
   }
-  .main-banner--info {
+  .main-banner__info {
     margin-left: 8%;
     bottom: 44px;
   }
-  .main-banner--title {
+  .main-banner__title {
     font-size: 32px;
     line-height: 36px;
     margin-bottom: 19px;
   }
-  .main-banner--desc {
+  .main-banner__desc {
     font-size: 14px;
     line-height: 18px;
     margin-bottom: 46px;
   }
-  .main-banner--show {
+  .main-banner__show {
     a {
       font-size: 12px;
       line-height: 16px;
@@ -87,13 +87,40 @@
       height: 7px;
     }
   }
-  .main-banner--dots {
+  .main-banner__dots {
     bottom: 35px;
     right: 35px;
 
     li {
       width: 5px;
       height: 5px;
+    }
+  }
+
+  .main-works {
+    padding: 65px 0;
+
+    &__title  {
+      font-size: 20px;
+      line-height: 26px;
+      margin-bottom: 41px;
+      &:before {
+        width: 35px;
+        height: 15px;
+        top: -35px;
+      }
+    }
+    &__item-img {
+      margin-bottom: 21px;
+    }
+    &__item-title {
+      font-size: 19px;
+      line-height: 25px;
+      margin-bottom: 22px;
+    }
+    &__item-link {
+      font-size: 11px;
+      line-height: 14px;
     }
   }
 }
@@ -301,26 +328,26 @@
 }
 
 @media screen and (max-width: 650px) {
-  .main-banner--item {
+  .main-banner__item {
     height: 517px;
   }
-  .main-banner--info {
+  .main-banner__info {
     margin: 0;
     bottom: 30px;
   }
-  .main-banner--title {
+  .main-banner__title {
     font-size: 18px;
     line-height: 22px;
     margin-bottom: 14px;
     width: 70%;
   }
-  .main-banner--desc {
+  .main-banner__desc {
     font-size: 12px;
     line-height: 20px;
     width: 86%;
     margin-bottom: 40px;
   }
-  .main-banner--show {
+  .main-banner__show {
     a {
       font-size: 12px;
       line-height: 16px;
@@ -330,9 +357,34 @@
       display: none;
     }
   }
-  .main-banner--dots {
+  .main-banner__dots {
     bottom: 30px;
     right: 30px;
+  }
+  .main-works {
+    padding: 47px 0 67px 0;
+    &__title  {
+      font-size: 13px;
+      line-height: 17px;
+      margin-bottom: 30px;
+      &:before {
+        width: 32px;
+        height: 16px;
+        top: -30px;
+      }
+    }
+    &__item-content {
+      width: 280px;
+      margin: auto;
+    }
+    &__item-img {
+      width: 280px;
+      height: auto;
+      margin-bottom: 25px;
+    }
+    &__item-title {
+      margin-bottom: 15px;
+    }
   }
 }
 
