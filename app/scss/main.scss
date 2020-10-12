@@ -750,7 +750,7 @@ a{
 			//flex-direction: column;
 			width: 100%;
 			.item{
-				width: 33.33333%;
+				width: 100%;
 				margin-bottom: 50px;
 				//flex: 0 1 auto;
 				&__content{
@@ -805,6 +805,163 @@ a{
 	}
 	&__content{
 		display: flex;
+	}
+}
+.detail{
+	margin-top: 70px;
+	.container{
+		width: 1700px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	h1{
+		font-weight: bold;
+		font-size: 26px;
+		line-height: 32px;
+		margin-bottom: 30px;
+		margin-left: 165px;
+	}
+	&__top{
+		display: flex;
+		align-items: flex-start;
+		.slider{
+			display: flex;
+			width: 70%;
+			.preview{
+				width: 125px;
+				a{
+					display: block;
+					text-align: right;
+					margin-bottom: 40px;
+					&.active{
+						img{
+							width: 100%;
+						}
+					}
+					&:hover{
+						img{
+							width: 100%;
+						}
+					}
+					img{
+						width: 80%;
+						transition: .4s all;
+					}
+				}
+			}
+			.image{
+				margin-left: 40px;
+				width: 100%;
+				img{
+					width: 100%;
+					transition: .4s all;
+				}
+			}
+		}
+		.info{
+			background-color: #E0E0E0;
+			margin-left: 20px;
+			padding: 45px;
+			width: 30%;
+			.tabs{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-bottom: 60px;
+				a{
+					font-weight: normal;
+					font-size: 14px;
+					line-height: 18px;
+					text-align: center;
+					margin: 0 50px;
+					position: relative;
+					&:nth-child(1){
+						&:before{
+							content: '';
+							width: 50px;
+							height: 1px;
+							background-color: $black;
+							position: absolute;
+							top: 8px;
+							right: -70px;
+							transform: rotate(-70deg);
+						}
+					}
+					&.active{
+						font-weight: 600;
+					}
+				}
+			}
+			&__content{
+				display: flex;
+				justify-content: space-between;
+				align-items: flex-start;
+				.text{
+					h4{
+						font-style: italic;
+						font-weight: lighter;
+						font-size: 18px;
+						line-height: 23px;
+						margin-bottom: 3px;
+					}
+					p{
+						font-weight: 300;
+						font-size: 16px;
+						line-height: 21px;
+						display: flex;
+						align-items: flex-end;
+						color: $red;
+					}
+					span{
+						display: block;
+						font-weight: normal;
+						font-size: 11px;
+						line-height: 14px;
+						margin-top: 10px;
+					}
+				}
+				.price{
+					p{
+						font-weight: normal;
+						font-size: 25px;
+						line-height: 32px;
+					}
+				}
+			}
+			.tab{
+				margin-top: 25px;
+				&.tab1{
+					.button{
+						margin-top: 80px;
+					}
+				}
+				p{
+					font-weight: 300;
+					font-size: 13px;
+					line-height: 13px;
+					margin-bottom: 6px;
+				}
+			}
+			.button{
+				.btn{
+					padding: 13px 20px;
+				}
+			}
+		}
+	}
+}
+.btn{
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 18px;
+	transition: .4s all;
+	display: inline-block;
+	&.red{
+		background-color: $red;
+		color: #fff;
+		&:hover{
+			background-color: #cc0707;
+		}
 	}
 }
 .masonry { /* Masonry container */
