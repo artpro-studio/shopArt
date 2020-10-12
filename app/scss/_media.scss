@@ -61,7 +61,11 @@
     padding: 70px 5%;
   }
 }
-
+@media screen and (max-width:1100px){
+  .catalog__wrap .catalog_products .item{
+    width: 50%;
+  }
+}
 @media screen and (max-width: 960px) {
   .main-banner__item {
     height: 356px;
@@ -448,6 +452,11 @@
       }
       .catalog_products{
         margin-left: 60px;
+        .item{
+          .item__content{
+            width: 190px;
+          }
+        }
       }
     }
   }
@@ -748,9 +757,9 @@
         .catalog_products{
           margin-left: 0;
           .item{
-            width: 100%;
+            width: 50%;
             &__content{
-              width: 100%;
+              width: 90%;
               .text{
                 h4 a{
                   font-size: 12px;

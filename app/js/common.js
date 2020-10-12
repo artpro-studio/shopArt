@@ -15,10 +15,11 @@ $(function() {
         $(this).toggleClass('active');
         $('.filter form').slideToggle();
     });
-    // $('.catalog_products').masonry({
-    //     columnWidth: 200,
-    //     itemSelector: '.grid-item'
-    // });
+    $('.grid').masonry({
+        percentPosition: true,
+        itemSelector: '.grid-item',
+        horizontalOrder: true
+    });
     $('.js--main-banner').slick({
         autoplay: true,
         prevArrow: '',
