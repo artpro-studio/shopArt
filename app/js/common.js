@@ -42,5 +42,10 @@ $(function() {
             }
             },
         ]
-    })
+    });
+    $('.js--main-collection').slick({
+        arrows: true,
+        prevArrow: '.prev-arrow',
+        nextArrow: '.next-arrow'
+    });
 });

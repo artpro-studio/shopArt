@@ -123,6 +123,92 @@
       line-height: 14px;
     }
   }
+  .mail-mailing {
+    padding: 42px 10%;
+
+    &__title {
+      font-size: 17px;
+      line-height: 22px;
+    }
+
+    &__description {
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+  .mailing-form {
+    input {
+      font-size: 10px;
+      line-height: 13px;
+      padding: 14px 19px 17px;
+    }
+
+    button[type="submit"] {
+      font-size: 12px;
+      line-height: 16px;
+      padding: 14px 0 17px;
+      width: 150px;
+    }
+  }
+  .main-collection {
+    &__item {
+      height: 547px;
+
+      &:before {
+        width: 51%
+      }
+    }
+
+    &__content-top {
+      top: 71px;
+      left: 12%;
+      font-size: 12px;
+      line-height: 16px;
+    }
+
+    &__content-bottom {
+      bottom: 85px;
+      left: 12%;
+    }
+
+    .mccb {
+      &__title, &__desc {
+        margin-left: 0;
+      }
+
+      &__title {
+        font-size: 36px;
+        line-height: 42px;
+        margin-bottom: 17px;
+      }
+
+      &__desc {
+        font-size: 16px;
+        line-height: 21px;
+        margin-bottom: 22px;
+      }
+
+      &__button {
+        padding: 13px 43px;
+        font-size: 11px;
+        line-height: 14px;
+      }
+    }
+
+    .arrows {
+      right: 92px;
+      bottom: 50px;
+
+      .arrow {
+        width: 14px;
+        height: 25px;
+      }
+
+      .next-arrow {
+        margin-left: 18px;
+      }
+    }
+  }
 }
 
 // ≤992px
@@ -324,7 +410,23 @@
 }
 // ≤768px
 @media screen and (max-width:768px){
+  .mail-mailing {
+    padding: 40px 0;
 
+    &__content {
+      flex-direction: column;
+      align-items: unset;
+    }
+
+    &__info {
+      flex: 0 0 100%;
+      margin-bottom: 32px;
+    }
+
+    &__form {
+      flex: 0 0 100%;
+    }
+  }
 }
 
 @media screen and (max-width: 650px) {
@@ -384,6 +486,83 @@
     }
     &__item-title {
       margin-bottom: 15px;
+    }
+  }
+  .mailing-form {
+    flex-direction: column;
+    align-items: unset;
+
+    input {
+      margin: 0 0 23px 0;
+      padding: 15px 26px 12px;
+    }
+
+    button[type="submit"] {
+      padding: 15px 0 18px;
+      width: 183px;
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+
+  .main-collection {
+    &__item {
+      height: 540px;
+
+      &:before {
+        top: unset;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 230px;
+      }
+    }
+
+    &__content {
+      position: absolute;
+      content: '';
+      bottom: 20px;
+      left: 20px;
+      width: 100%;
+      height: auto;
+    }
+
+    &__content-top, &__content-bottom {
+      position: relative;
+      left: unset;
+      top: unset;
+      bottom: unset;
+      right: unset;
+    }
+
+    &__content-top {
+      font-size: 12px;
+      line-height: 16px;
+      margin-bottom: 44px;
+    }
+
+    .mccb {
+      &__title {
+        font-size: 28px;
+        line-height: 36px;
+        margin-bottom: 7px;
+      }
+
+      &__desc {
+        font-size: 12px;
+        line-height: 16px;
+        margin-bottom: 35px;
+      }
+
+      &__button {
+        padding: 13px 42px;
+        display: inline-block;
+      }
+    }
+
+    .arrows {
+      right: 5%;
+      bottom: 5%;
     }
   }
 }
