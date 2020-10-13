@@ -1,4 +1,34 @@
 $(function() {
+    $('.detail .preview a').on('click', function () {
+        $('.detail .preview a').removeClass('active');
+        $(this).addClass('active');
+        let img = $(this).attr('attr-img');
+        $(this).parents('.slider').find('.image').css('background-image', 'url("'+ img +'")');
+    });
+
+    $('.detail .tabs a').on('click', function () {
+        $('.detail .tabs a').removeClass('active');
+        $(this).addClass('active');
+        let idTab = $(this).attr('attr-tab');
+        $('.detail .tab').removeClass('active');
+        $(`.detail .tab.tab${idTab}`).addClass('active');
+    });
+
+    $('.selects .placeholder').on('click', function () {
+        if($(this).parents('.selects').hasClass('active')){
+            $(this).parents('.selects').removeClass('active');
+        }else{
+            $('.selects').removeClass('active');
+            $(this).parents('.selects').addClass('active');
+        }
+    });
+    $('.selects li').on('click', function () {
+        let id = $(this).attr('attr-id'),
+        text = $(this).text();
+        $(this).parents('.selects').find('.placeholder').text(text).attr('attr-id',id);
+        $(this).parents('.selects').removeClass('active');
+    });
+
     $('.mobile_touch .search a').on('click', function () {
         $('.mobile_touch .search').toggleClass('active')
     });
