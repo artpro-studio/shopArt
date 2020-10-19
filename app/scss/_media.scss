@@ -816,7 +816,22 @@
       margin: 0 5px;
     }
     &__top .slider .preview {
-      display: none;
+      position: relative;
+      left: 0;
+      width: 100%;
+      a {
+        height: 176px;
+        margin: 0 5px 0 5px;
+        position: relative;
+      }
+      .like {
+        position: absolute;
+        content: '';
+        width: 14px;
+        height: 12px;
+        bottom: 10px;
+        right: 10px;
+      }
     }
 
     h1 {
@@ -828,12 +843,11 @@
       .slider {
         width: 100%;
         .image {
-          height: 176px;
-          width: 280px; //todo
+          display: none;
         }
       }
       .info {
-        margin: 23px 0 0;
+        margin: 23px auto 0 auto;
         padding: 21px;
         .tabs {
           margin-bottom: 12px;
@@ -895,7 +909,7 @@
       }
     }
     &__info {
-      margin-bottom: 17px;
+      margin: 0 20px 17px 40px;
       hr {
         width: 100%
       }
@@ -920,7 +934,56 @@
     &__row-title {
       font-size: 14px;
       line-height: 24px;
-      margin-bottom: 30px;
+      margin: 0 20px 30px 40px;
+    }
+
+    &__row-items {
+      margin: 0;
+      display: block;
+    }
+
+    &__row-item {
+      margin: 0 10px;
+    }
+
+    &__row-item-image {
+      width: auto;
+      height: 190px;
+    }
+
+    .container {
+      padding: 0;
+    }
+
+    &__row-item-title,
+    &__row-item-info,
+    &__row-item-desc {
+      opacity: 0;
+      transition: .4s all;
+    }
+    .slick-current &__row-item-title,
+    .slick-current &__row-item-info,
+    .slick-current &__row-item-desc {
+      opacity: 1;
+    }
+    &__row-item-title {
+      font-size:  12px;
+      line-height: 12px;
+      font-weight: bold;
+    }
+    &__row-item-info {
+      font-size:  10px;
+      line-height: 10px;
+    }
+    &__row-item-desc {
+      font-size:  8px;
+      line-height: 8px;
+    }
+    &__container {
+      margin: 0;
+    }
+    &__row {
+      margin-bottom: 40px;
     }
   }
   .btn {
@@ -1141,6 +1204,12 @@
   }
 }
 
+@media screen and (min-width: 650px){
+  .detail__row-items .slick-list {
+    padding: 0 !important;
+    box-sizing: border-box;
+  }
+}
 
 
 
