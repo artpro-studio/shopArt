@@ -1,4 +1,21 @@
 $(function() {
+    Notiflix.Notify.Init({
+        fontFamily:"IBM Plex Sans",
+        useIcon:false,
+        closeButton:true,
+        useGoogleFont:true,
+        success: {
+            background:'#041423',
+            textColor:'#fff',
+            childClassName:'success',
+            notiflixIconColor:'rgba(255,255,255,255.2)',
+            fontAwesomeClassName:'fas fa-shopping-cart',
+            fontAwesomeIconColor:'rgba(25,255,255,0.2)',
+            backOverlayColor:'rgba(50,198,130,0.2)',
+        },
+    });
+    Notiflix.Notify.Success('Товар добавлен в корзину');
+    // You can type your text in String format.Notiflix.Notify.Success('Sol lucet omnibus');
     $('.detail .preview a').on('click', function () {
         $('.detail .preview a').removeClass('active');
         $(this).addClass('active');
@@ -79,4 +96,25 @@ $(function() {
         prevArrow: '.prev-arrow',
         nextArrow: '.next-arrow'
     });
+    $('.js--detail-items').slick({
+        arrows: false,
+        slidesToShow: 4,
+        responsive: [
+            {
+                breakpoint: 970,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            // {
+            //     breakpoint: 651,
+            //     settings: {
+            //         arrows: false,
+            //         centerMode: true,
+            //         centerPadding: '40px',
+            //         slidesToShow: 1
+            //     }
+            // },
+        ]
+    })
 });

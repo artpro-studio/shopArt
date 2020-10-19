@@ -257,6 +257,153 @@
     padding: 14px 0 11px;
     width: 205px;
   }
+  .detail {
+    .container  {
+      width: 100%;
+    }
+    h1 {
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 13px;
+    }
+    &__top {
+      margin-bottom: 43px;
+      .slider {
+        width: auto;
+        .image {
+          width: 430px;
+          height: 295px;
+          .like {
+            bottom: 20px;
+            right: 20px;
+          }
+        }
+        .preview {
+          left: -144px;
+          a {
+            margin-bottom: 22px;
+          }
+        }
+      }
+      .info {
+        width: 280px;
+        padding: 28px;
+        .tabs {
+          margin-bottom: 30px;
+          a {
+            font-size: 12px;
+            line-height: 16px;
+            margin: 0 24px;
+
+            &:nth-child(1):before {
+              width: 25px;
+              right: -40px;
+            }
+          }
+        }
+        .tab {
+          margin-top: 18px;
+          p {
+            font-size: 8px;
+            line-height: 10px;
+            margin-bottom: 2px;
+          }
+          &.tab1 {
+            .button {
+              margin-top: 20px;
+            }
+          }
+        }
+        .button .btn {
+          padding: 8px 13px;
+        }
+        .tab__info {
+          margin-bottom: 28px;
+        }
+      }
+
+      .info__content {
+        .text {
+          h4 {
+            font-size: 14px;
+            line-height: 18px;
+            margin-bottom: 8px;
+          }
+
+          p {
+            font-size: 11px;
+            line-height: 14px;
+          }
+          span {
+            font-size: 9px;
+            line-height: 12px;
+            margin-top: 9px;
+          }
+        }
+
+        .price {
+          p {
+            font-size: 18px;
+            line-height: 23px;
+          }
+        }
+      }
+    }
+    &__info {
+      margin-bottom: 40px;
+    }
+    &__info-title {
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 23px;
+    }
+    &__info-item {
+      font-size: 15px;
+      line-height: 16px;
+      margin: 10px 0;
+      img {
+        width: 18px;
+      }
+    }
+    &__row {
+      margin-bottom: 57px;
+    }
+    &__row-title {
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 37px;
+    }
+    &__row-item-image {
+      margin-bottom: 19px;
+    }
+    &__row-item-title {
+      margin-bottom: 20px;
+    }
+    &__row-item-info {
+      margin-bottom: 20px;
+      width: 65%;
+    }
+  }
+  .btn {
+    font-size: 9px;
+    line-height: 12px;
+  }
+  .selects {
+    .placeholder {
+      height: 33px;
+      font-size: 10px;
+      line-height: 13px;
+
+      &:before {
+        height: 7px;
+      }
+    }
+    ul li {
+      font-size: 10px;
+      line-height: 13px;
+      padding: 7px;
+    }
+  }
 }
 
 // ≤992px
@@ -662,6 +809,124 @@
     font-size: 11px;
     line-height: 14px;
   }
+  .detail{
+    margin-top: 18px;
+
+    &__container {
+      margin: 0 5px;
+    }
+    &__top .slider .preview {
+      display: none;
+    }
+
+    h1 {
+      display: none;
+    }
+    &__top {
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+      .slider {
+        width: 100%;
+        .image {
+          height: 176px;
+          width: 280px; //todo
+        }
+      }
+      .info {
+        margin: 23px 0 0;
+        padding: 21px;
+        .tabs {
+          margin-bottom: 12px;
+          a {
+            font-size: 9px;
+            line-height: 12px;
+            margin: 0 20px;
+
+            &:nth-child(1):before {
+              width: 16px;
+              right: -30px;
+              top: 5px;
+            }
+          }
+        }
+        .tab {
+          &.active {
+            margin-top: 11px;
+          }
+          &.tab1.active {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .button {
+              margin-top: 0;
+            }
+          }
+        }
+        .tab__info .item {
+          margin-bottom: 10px;
+        }
+        .button .btn {
+          padding: 10px 13px;
+        }
+      }
+      .info__content {
+        .text {
+          h4 {
+            font-size: 12px;
+            line-height: 16px;
+            margin-bottom: 0;
+          }
+          p {
+            font-size: 9px;
+            line-height: 12px;
+            margin-bottom: 10px;
+          }
+          span {
+            font-size: 9px;
+            line-height: 12px;
+          }
+        }
+        .price {
+          p {
+            font-size: 14px;
+            line-height: 18px;
+          }
+        }
+      }
+    }
+    &__info {
+      margin-bottom: 17px;
+      hr {
+        width: 100%
+      }
+    }
+    &__info-title  {
+      margin-bottom: 10px;
+      font-size: 13px;
+      line-height: 24px;
+    }
+    &__info-item {
+      font-size: 10px;
+      line-height: 10px;
+      margin: 8px 0;
+      img {
+        width: 12px;
+        height: 15px;
+        position: relative;
+        left: 0;
+        margin-right: 15px;
+      }
+    }
+    &__row-title {
+      font-size: 14px;
+      line-height: 24px;
+      margin-bottom: 30px;
+    }
+  }
+  .btn {
+    font-size: 8px;
+    line-height: 10px;
+  }
 }
 
 // ≤576px
@@ -812,6 +1077,66 @@
     }
     &__content{
       flex-wrap: wrap;
+    }
+  }
+  .auth_page{
+    margin: 30px 0;
+    &__content{
+      min-height: auto;
+    }
+    .auth_form{
+      width: 100%;
+      padding: 20px;
+      h4{
+        font-size: 20px;
+        margin-bottom: 5px;
+      }
+      .social_auth{
+        flex-wrap: wrap;
+        p{
+          width: 100%;
+          margin-bottom: 15px;
+        }
+        &__content{
+          justify-content: flex-start;
+          margin-left: 0;
+          a{
+            width: 50px;
+            height: 33px;
+            margin: 0 5px;
+            svg{
+              height: 15px;
+              width: auto;
+            }
+          }
+        }
+      }
+      form{
+        margin-top: 20px;
+        .field{
+          margin-bottom: 20px;
+          &.mb40{
+            margin-bottom: 20px;
+          }
+          label{
+            font-size: 11px;
+            margin-bottom: 7px;
+          }
+          input{
+            font-size: 14px;
+            &::placeholder{
+              font-size: 14px;
+            }
+          }
+        }
+        .button{
+          .btn{
+            width: 100%;
+            font-size: 14px;
+            height: 46px;
+          }
+        }
+      }
     }
   }
 }
