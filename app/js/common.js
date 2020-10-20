@@ -1,4 +1,11 @@
+$(window).scroll(function () {
+    $('.header').toggleClass('active', $(this).scrollTop() > 50);
+});
 $(function() {
+    $('.col h5').on('click', function () {
+        $(this).parents('.col').toggleClass('active');
+        $(this).next().slideToggle();
+    });
     Notiflix.Notify.Init({
         fontFamily:"IBM Plex Sans",
         useIcon:false,
