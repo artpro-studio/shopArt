@@ -19,6 +19,21 @@
   }
 }
 // ≤1200px
+@media screen and (max-width:1300px){
+  .order-card {
+    padding: 24px 20px 38px 53px;
+    &__left {
+      flex: 0 0 59%;
+    }
+  }
+  .basket {
+    &__delivery {
+      .right hr {
+        width: 100%;
+      }
+    }
+  }
+}
 @media screen and (max-width:1220px){
   body{
     padding-top: 112px;
@@ -67,6 +82,126 @@
 @media screen and (max-width:1100px){
   .catalog__wrap .catalog_products .item{
     width: 50%;
+  }
+  .basket {
+    .title {
+      font-weight: bold;
+      font-size: 17px;
+      line-height: 22px;
+      margin-bottom: 20px;
+    }
+    &__delivery {
+      margin-bottom: 100px;
+      .radio-buttons label {
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      .radio-button .custom-checkbox + label::before {
+        top: 5px;
+      }
+
+      .radio-button .custom-checkbox:checked + label::after {
+        top: 9px;
+      }
+
+      .radio-button {
+        flex: 0 0 40%;
+
+        &:first-child {
+          flex: 0 0 60%;
+        }
+      }
+
+
+      .right {
+        flex: 0 0 42.5%;
+      }
+
+      .info-for-delivery-type {
+        margin-top: 18px;
+      }
+
+      .field {
+        label {
+          margin-bottom: 16px;
+        }
+      }
+
+      .field-narrow input, .field input, hr {
+        width: 80%;
+      }
+
+      .field-b-large {
+        margin-bottom: 32px;
+      }
+
+      .field-b-medium {
+        margin-bottom: 29px;
+      }
+
+      .field-promo {
+        label {
+          font-size: 12px;
+          line-height: 16px;
+        }
+
+        input {
+          font-weight: 300;
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
+
+      hr {
+        margin-top: 30px;
+      }
+      .info-for-payment-type {
+        margin-top: 50px;
+      }
+      .button {
+        margin-top: 76px;
+      }
+    }
+    .button {
+      .btn {
+        width: 264px;
+      }
+    }
+  }
+  .order-card {
+    &__left {
+      flex: 0 0 54%;
+    }
+    &__row {
+      margin-bottom: 30px;
+    }
+    &__img {
+      height: 105px;
+    }
+    &__name {
+      font-size: 14px;
+      line-height: 18px;
+    }
+    &__desc {
+      font-size: 10px;
+      line-height: 13px;
+      p {
+        font-size: 12px;
+        line-height: 16px;
+        margin-bottom: 7px;
+      }
+    }
+    &__total {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 18px;
+    }
+    &__total-cost {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 23px;
+    }
   }
 }
 @media screen and (max-width: 960px) {
@@ -408,6 +543,13 @@
       padding: 7px;
     }
   }
+  .basket__approve {
+    margin-bottom: 119px;
+    width: 51.5%;
+    .button .btn  {
+      width: 100%;
+    }
+  }
 }
 
 // ≤992px
@@ -684,6 +826,17 @@
           }
         }
       }
+    }
+  }
+  .basket {
+    .left {
+      padding-right: 0;
+    }
+    .right {
+      display: none;
+    }
+    &__approve {
+      width: 80%;
     }
   }
 }
@@ -1049,6 +1202,84 @@
     font-size: 8px;
     line-height: 10px;
   }
+
+  .basket {
+    .left {
+      width: 100%;
+    }
+    &__delivery {
+      margin-bottom: 50px;
+      .radio-buttons {
+        margin-bottom: 20px;
+        label {
+          font-size: 11px;
+          line-height: 16px;
+        }
+      }
+      .radio-button {
+        padding-left: 25px;
+      }
+      .radio-button:first-child {
+        padding-right: 15px;
+        flex: 0 0 55%;
+      }
+      .radio-button {
+        flex: 0 0 auto;
+      }
+      .radio-button .custom-checkbox+label::before {
+        left: -25px;
+      }
+      .radio-button .custom-checkbox+label::before {
+        top: 3px;
+      }
+      .radio-button .custom-checkbox:checked+label::after {
+        top: 7px;
+        left: -21px;
+      }
+      hr {
+        display: none;
+      }
+      .info-for-delivery-type {
+        margin-top: 5px;
+      }
+      .field input,
+      .field-narrow input {
+        width: 100%;
+      }
+      .field {
+        input::placeholder {
+          font-size: 12px;
+          line-height: 16px;
+        }
+      }
+      .field-promo {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        label {
+          font-size: 10px;
+          line-height: 13px;
+          margin-right: 0;
+        }
+        input {
+          width: 38.5%;
+          padding: 8px 10px;
+          &::placeholder {
+            font-weight: 300;
+            font-size: 12px;
+            line-height: 16px;
+          }
+        }
+      }
+      .button {
+        margin-top: 50px;
+        .btn {
+          width: 100%;
+        }
+      }
+    }
+  }
+
 }
 
 // ≤576px
@@ -1465,6 +1696,14 @@
           }
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width:480px) {
+  .basket {
+    &__approve {
+      width: 100%;
     }
   }
 }
