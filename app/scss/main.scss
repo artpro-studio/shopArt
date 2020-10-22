@@ -1025,6 +1025,15 @@ a{
 			}
 		}
 	}
+	&__finish {
+		.title {
+			margin-bottom: 55px;
+		}
+		.description {
+			font-size: 18px;
+			line-height: 20px;
+		}
+	}
 }
 .order-card {
 	background-color: rgba(209,209,209, .3);
