@@ -629,6 +629,15 @@
       flex: 0 0 calc(85% - 210px);
     }
   }
+    .authors {
+      margin-left: 12%;
+      .title {
+        margin-bottom: 70px;
+      }
+      &__item {
+        flex: 0 0 100%;
+      }
+    }
 }
 
 // ≤992px
@@ -1586,6 +1595,13 @@
       margin-bottom: 40px;
     }
   }
+  .authors {
+    margin-left: 10.5%;
+
+    .title {
+      display: none;
+    }
+  }
 }
 
 // ≤576px
@@ -2149,6 +2165,22 @@
   .basket {
     &__approve {
       width: 100%;
+    }
+  }
+  .authors {
+    margin: 0 auto 55px;
+    &__item {
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-right: 0;
+      margin-bottom: 66px;
+      .photo {
+        flex: 0 0 100%;
+        margin-bottom: 20px;
+        width: 180px;
+        height: 170px;
+        margin-right: 0;
+      }
     }
   }
 }

@@ -1214,6 +1214,52 @@ a{
 		margin-bottom: 28px;
 	}
 }
+
+.authors {
+	margin: 34px 0 270px 11%;
+
+	.title {
+		font-weight: bold;
+		font-size: 26px;
+		line-height: 32px;
+		margin-bottom: 50px;
+	}
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&__item {
+		flex: 0 0 50%;
+		display: flex;
+		margin-bottom: 60px;
+		.photo {
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+			width: 169px;
+			height: 169px;
+			margin-right: 60px;
+		}
+		.name {
+			font-size: 18px;
+			line-height: 20px;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		.country {
+			font-size: 11px;
+			line-height: 14px;
+			margin: 5px 0;
+		}
+		.description {
+			font-weight: 300;
+			font-size: 10px;
+			line-height: 13px;
+		}
+	}
+}
+
 .detail__row-items.detail__row-items-wm {
 	margin-left: 0;
 }
