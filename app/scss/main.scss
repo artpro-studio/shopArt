@@ -28,7 +28,7 @@ a{
 	left: 0;
 	width: 100%;
 	padding-bottom: 30px;
-	z-index: 2;
+	z-index: 1000;
 	background-color: #fff;
 	transition: .4s all;
 	&.active{
@@ -1099,6 +1099,125 @@ a{
 	}
 }
 
+.author {
+	margin-bottom: 200px;
+	&__container {
+		margin-left: 125px;
+	}
+	.right {
+		flex: 0 0 555px;
+		p {
+			font-size: 12px;
+			line-height: 20px;
+			color: #3E3E3E;
+		}
+		.label {
+			font-weight: bold;
+			margin-top: 15px;
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+		.text {
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	&__content {
+		display: flex;
+		margin-bottom: 65px;
+	}
+	.left {
+		width: 210px;
+		margin-right: 135px;
+
+		.photo {
+			width: 210px;
+			height: 210px;
+			margin-bottom: 40px;
+			position: relative;
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center;
+			&:after {
+				position: absolute;
+				content: '';
+				bottom: 0;
+				right: 0;
+				width: 15px;
+				height: 15px;
+				background-image: url('../img/edit.svg');
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-position: center;
+			}
+		}
+		.name {
+			font-weight: bold;
+			font-size: 20px;
+			line-height: 26px;
+			margin-bottom: 10px;
+		}
+		.country {
+			font-size: 12px;
+			line-height: 16px;
+			color: #3E3E3E;
+			margin-bottom: 25px;
+		}
+		.socials {
+			display: flex;
+			align-items: center;
+			margin-bottom: 25px;
+			img  {
+				width: 15px;
+				height: 15px;
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+			a {
+				margin-right: 15px;
+			}
+		}
+		.subscribe {
+			font-size: 12px;
+			line-height: 16px;
+			color: #8A8A8A;
+			padding-left: 21px;
+			box-sizing: border-box;
+			position: relative;
+			&:before {
+				position: absolute;
+				content: '';
+				left: 0;
+				top: calc(50% - 3px);
+				width: 8px;
+				height: 7px;
+				background-image: url('../img/arrowNext2.svg');
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-position: center;
+				transition: .4s all;
+			}
+		}
+		.subscribe:hover{
+			&:before {
+				left: 9px;
+			}
+		}
+	}
+	.detail-title {
+		font-weight: bold;
+		font-size: 20px;
+		line-height: 26px;
+		margin-bottom: 28px;
+	}
+}
+.detail__row-items.detail__row-items-wm {
+	margin-left: 0;
+}
+
 .catalog{
 	margin-top: 50px;
 	&__top{
@@ -1592,6 +1711,7 @@ a{
 	&__row-item {
 		margin-right: 20px;
 		color: #3E3E3E;
+		outline: transparent;
 
 		&:last-child {
 			margin-right: 0;
