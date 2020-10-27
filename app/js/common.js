@@ -103,33 +103,6 @@ $(function() {
         prevArrow: '.prev-arrow',
         nextArrow: '.next-arrow'
     });
-    var windowWidth = $(window).width();
-    if (windowWidth > 960) {
-        $('.js--detail-items').slick({
-            arrows: false,
-            slidesToShow: 4,
-        });
-    } else if (windowWidth > 650) {
-        $('.js--detail-items').slick({
-            arrows: false,
-            slidesToShow: 3,
-        });
-    } else {
-        $('.js--detail-items').slick({
-            arrows: false,
-            slidesToShow: 1,
-            centerMode:true,
-            centerPadding: '35px',
-        })
-    }
-    if (windowWidth <= 650) {
-        $('.js--preview').slick({
-            arrows: false,
-            slidesToShow: 1,
-            centerMode:true,
-            centerPadding: '15px',
-        })
-    }
     $('.js--delivery-type').change(function () {
         var $this = $(this);
         $('.js--deliveryType').removeClass('active');
@@ -140,4 +113,44 @@ $(function() {
         $('.js--paymentType').removeClass('active');
         $('.js--paymentType[data-type="' + $this.val() +'"]').addClass('active');
     });
+    $(document).ready(function () {
+        updateDetailSliders();
+        $(window).resize(function () {
+            updateDetailSliders();
+        });
+    });
 });
+
+function updateDetailSliders() {
+    var windowWidth = $(window).width();
+    var $items = $('.js--detail-items');
+    $items.filter('.slick-initialized').slick('unslick');
+    if (windowWidth > 960) {
+        $items.slick({
+            arrows: false,
+            slidesToShow: 4,
+        });
+    } else if (windowWidth > 650) {
+        $items.slick({
+            arrows: false,
+            slidesToShow: 3,
+        });
+    } else {
+        $items.slick({
+            arrows: false,
+            slidesToShow: 1,
+            centerMode:true,
+            centerPadding: '35px',
+        })
+    }
+    var $preview = $('.js--preview');
+    $preview.filter('.slick-initialized').slick('unslick');
+    if (windowWidth <= 650) {
+        $preview.slick({
+            arrows: false,
+            slidesToShow: 1,
+            centerMode:true,
+            centerPadding: '15px',
+        })
+    }
+}
