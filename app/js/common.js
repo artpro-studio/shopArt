@@ -125,24 +125,31 @@ function updateDetailSliders() {
     var windowWidth = $(window).width();
     var $items = $('.js--detail-items');
     $items.filter('.slick-initialized').slick('unslick');
-    if (windowWidth > 960) {
-        $items.slick({
-            arrows: false,
-            slidesToShow: 4,
-        });
-    } else if (windowWidth > 650) {
-        $items.slick({
-            arrows: false,
-            slidesToShow: 3,
-        });
-    } else {
-        $items.slick({
-            arrows: false,
-            slidesToShow: 1,
-            centerMode:true,
-            centerPadding: '35px',
-        })
-    }
+
+    $items.each(function () {
+        var $this= $(this);
+
+        var elementCount = $this.find('.detail__row-item').length;
+        if (windowWidth > 960) {
+            $this.slick({
+                arrows: false,
+                slidesToShow: elementCount < 4 ? elementCount : 4,
+            });
+        } else if (windowWidth > 650) {
+            $this.slick({
+                arrows: false,
+                slidesToShow: elementCount < 3 ? elementCount : 3,
+            });
+        } else {
+            $this.slick({
+                arrows: false,
+                slidesToShow: 1,
+                centerMode:true,
+                centerPadding: '35px',
+            })
+        }
+    });
+
     var $preview = $('.js--preview');
     $preview.filter('.slick-initialized').slick('unslick');
     if (windowWidth <= 650) {
