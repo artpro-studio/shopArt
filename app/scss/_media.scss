@@ -1834,6 +1834,22 @@
                   }
                 }
               }
+              .item_action{
+                display: block;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                a{
+                  margin: 0 3px;
+                  svg{
+                    height: 16px;
+                    width: 16px;
+                  }
+                  img{
+                    height: 16px;
+                  }
+                }
+              }
             }
           }
         }
