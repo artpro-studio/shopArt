@@ -130,15 +130,20 @@ function updateDetailSliders() {
         var $this= $(this);
 
         var elementCount = $this.find('.detail__row-item').length;
-        if (windowWidth > 960) {
+        if (windowWidth > 1024) {
             $this.slick({
                 arrows: false,
                 slidesToShow: elementCount < 4 ? elementCount : 4,
             });
-        } else if (windowWidth > 650) {
+        } else if (windowWidth > 820) {
             $this.slick({
                 arrows: false,
                 slidesToShow: elementCount < 3 ? elementCount : 3,
+            });
+        } else if (windowWidth > 650) {
+            $this.slick({
+                arrows: false,
+                slidesToShow: elementCount < 2 ? elementCount : 2,
             });
         } else {
             $this.slick({
