@@ -2624,6 +2624,11 @@ a{
 		font-size: 17px;
 		line-height: 22px;
 		text-transform: uppercase;
+		transition: .4s all;
+		&:hover{
+			background-color: $black;
+			color: #fff;
+		}
 	}
 }
 
@@ -2675,6 +2680,11 @@ a{
 	box-sizing: border-box;
 	display: block;
 	width: 325px;
+	transition: .4s all;
+	&:hover{
+		background-color: $black;
+		color: #fff;
+	}
 }
 
 .like {
