@@ -2564,6 +2564,11 @@ a{
 			border: 1px solid #000000;
 			box-sizing: border-box;
 			display: block;
+			transition: .4s all;
+			&:hover{
+				background-color: $black;
+				color: #fff;
+			}
 		}
 	}
 
