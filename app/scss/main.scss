@@ -28,7 +28,7 @@ a{
 	left: 0;
 	width: 100%;
 	padding-bottom: 30px;
-	z-index: 1000;
+	z-index: 100;
 	background-color: #fff;
 	transition: .4s all;
 	&.active{
@@ -1106,22 +1106,21 @@ a{
 	}
 	.right {
 		flex: 0 0 555px;
+	}
+	&__text{
+		margin-bottom: 30px;
+		&:last-child{
+			margin-bottom: 0;
+		}
 		p {
 			font-size: 12px;
 			line-height: 20px;
 			color: #3E3E3E;
 		}
-		.label {
+		h4{
 			font-weight: bold;
-			margin-top: 15px;
-			&:first-child {
-				margin-top: 0;
-			}
-		}
-		.text {
-			&:last-child {
-				margin-bottom: 0;
-			}
+			margin-bottom: 7px;
+			font-size: 12px;
 		}
 	}
 	&__content {
@@ -2492,6 +2491,11 @@ a{
 		font-size: 14px;
 		line-height: 21px;
 		padding: 20px 40px 20px 40px;
+		transition: .4s all;
+		cursor: pointer;
+		&:hover{
+			background-color: #000;
+		}
 	}
 }
 
@@ -2568,6 +2572,11 @@ a{
 			border: 1px solid #000000;
 			box-sizing: border-box;
 			display: block;
+			transition: .4s all;
+			&:hover{
+				background-color: $black;
+				color: #fff;
+			}
 		}
 	}
 
@@ -2628,6 +2637,11 @@ a{
 		font-size: 17px;
 		line-height: 22px;
 		text-transform: uppercase;
+		transition: .4s all;
+		&:hover{
+			background-color: $black;
+			color: #fff;
+		}
 	}
 }
 
@@ -2679,6 +2693,11 @@ a{
 	box-sizing: border-box;
 	display: block;
 	width: 325px;
+	transition: .4s all;
+	&:hover{
+		background-color: $black;
+		color: #fff;
+	}
 }
 
 .like {
