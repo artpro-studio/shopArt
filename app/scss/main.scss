@@ -33,6 +33,20 @@ a{
 	transition: .4s all;
 	&.active{
 		top: -53px;
+		box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+		.header__content{
+			.logo{
+				a{
+					img{
+						display: none;
+					}
+					.logo_scroll{
+						display: block;
+						height:25px;
+					}
+				}
+			}
+		}
 	}
 	.top{
 		display: flex;
@@ -176,6 +190,9 @@ a{
 				align-items: center;
 				img{
 					height: 46px;
+				}
+				.logo_scroll{
+					display: none;
 				}
 			}
 		}
@@ -1530,6 +1547,7 @@ a{
 	&__top{
 		display: flex;
 		margin-bottom: 58px;
+		align-items: flex-start;
 		.slider{
 			display: flex;
 			width: 70%;
@@ -1589,7 +1607,10 @@ a{
 				background-size: cover;
 				height: 100%;
 				position: relative;
-
+				img{
+					width: 100%;
+					height: auto;
+				}
 				.like {
 					position: absolute;
 					content: '';
@@ -2338,7 +2359,7 @@ a{
 	bottom: 88px;
 	list-style-type: none;
 	display: flex;
-
+	align-items: center;
 	button {
 		display: none;
 	}
@@ -2348,10 +2369,41 @@ a{
 		height: 7px;
 		background: rgba(255, 255, 255, 0.5);
 		margin-right: 5px;
+		transition: .4s all;
+		&:hover{
+			width: 9px;
+			height: 9px;
+		}
 	}
 
 	li.slick-active {
 		background: #FFFFFF;
+	}
+}
+@keyframes bounce {
+	0% {
+		transform: translateY(0);
+	}
+	5.55556% {
+		transform: translateY(0);
+	}
+	11.11111% {
+		transform: translateY(0);
+	}
+	22.22222% {
+		transform: translateY(-15px);
+	}
+	27.77778% {
+		transform: translateY(0);
+	}
+	33.33333% {
+		transform: translateY(-15px);
+	}
+	44.44444% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(0);
 	}
 }
 
@@ -2379,6 +2431,11 @@ a{
 			background-repeat: no-repeat;
 			background-size: contain;
 			background-position: center;
+
+			animation-iteration-count: infinite;
+			animation-duration: 1.5s;
+			animation: bounce 3.6s ease infinite;
+			transform-origin: 50% 50%;
 		}
 	}
 
@@ -2394,12 +2451,34 @@ a{
 
 	&__item {
 		padding: 0 10px;
+		&:hover{
+			.main-works__item-img{
+				&:before{
+					opacity: 1;
+				}
+			}
+
+		}
 	}
 
 	&__item-img {
 		display: block;
 		margin-bottom: 38px;
-
+		position: relative;
+		transition: .4s all;
+		box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
+		&:before{
+			content: '';
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0,0,0,.3);
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 2;
+			opacity: 0;
+			transition: .4s all;
+		}
 		img {
 			width: 100%;
 			height: 100%;
@@ -2493,8 +2572,17 @@ a{
 		padding: 20px 40px 20px 40px;
 		transition: .4s all;
 		cursor: pointer;
+		outline: transparent;
 		&:hover{
-			background-color: #000;
+			background-color: #8A8A8A;
+		}
+		&:active{
+			background-color: #fff;
+			color: #000;
+		}
+		&.focus{
+			background-color: #fff;
+			color: #000;
 		}
 	}
 }
@@ -2508,13 +2596,13 @@ a{
 		background-position: center;
 		height: 907px;
 		position: relative;
-
+		outline: transparent;
 		&:before {
 			position: absolute;
 			content: '';
 			top: 0;
 			left: 0;
-			width: 57%;
+			width: 50%;
 			height: 100%;
 			background-color: rgba(255, 255, 255, .8);
 			mix-blend-mode: screen;
@@ -2573,9 +2661,16 @@ a{
 			box-sizing: border-box;
 			display: block;
 			transition: .4s all;
+			outline: transparent;
 			&:hover{
+				background-color: #8A8A8A;
+				color: #fff;
+				border: 1px solid #8A8A8A;
+			}
+			&:active{
 				background-color: $black;
 				color: #fff;
+				border: 1px solid $black;
 			}
 		}
 	}
@@ -2597,6 +2692,12 @@ a{
 			border: none;
 			width: 21px;
 			height: 42px;
+			transition: .4s all;
+			cursor: pointer;
+			&:hover{
+				width: 37px;
+				height: 74px;
+			}
 		}
 
 		.prev-arrow {
@@ -2658,7 +2759,7 @@ a{
 		position: absolute;
 		content: '';
 		height: 100%;
-		width: 49%;
+		width: 50%;
 		bottom: 0;
 		right: 0;
 		background: rgba(245, 245, 245, 0.8);
@@ -2694,9 +2795,16 @@ a{
 	display: block;
 	width: 325px;
 	transition: .4s all;
+	outline: transparent;
 	&:hover{
+		background-color: #8A8A8A;
+		color: #fff;
+		border: 1px solid #8A8A8A;
+	}
+	&:active{
 		background-color: $black;
 		color: #fff;
+		border: 1px solid $black;
 	}
 }
 

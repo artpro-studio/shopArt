@@ -315,7 +315,7 @@
     }
 
     &__description {
-      font-size: 12px;
+      font-size: 14px;
       line-height: 16px;
     }
   }
@@ -385,6 +385,10 @@
       .arrow {
         width: 14px;
         height: 25px;
+        &:hover{
+          width: 20px;
+          height: 50px;
+        }
       }
 
       .next-arrow {
@@ -881,6 +885,9 @@
     padding-bottom: 0;
     &.active{
       top: 0;
+      .header__content .logo a .logo_scroll{
+        height: 22px;
+      }
     }
     .top{
       display: none;
@@ -1117,6 +1124,9 @@
   }
   .main-works {
     padding: 47px 0 67px 0;
+    .container{
+      padding: 0;
+    }
     &__title  {
       font-size: 13px;
       line-height: 17px;
@@ -1127,17 +1137,24 @@
         top: -30px;
       }
     }
+    &__item{
+      padding: 0;
+    }
     &__item-content {
-      width: 280px;
+      width: 100%;
       margin: auto;
     }
     &__item-img {
-      width: 280px;
+      width: 100%;
       height: auto;
       margin-bottom: 25px;
     }
     &__item-title {
       margin-bottom: 15px;
+      padding: 0 15px;
+    }
+    &__item-link{
+      margin-left: 15px;
     }
   }
   .mailing-form {
