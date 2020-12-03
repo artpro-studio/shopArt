@@ -2,6 +2,14 @@ $(window).scroll(function () {
     $('.header').toggleClass('active', $(this).scrollTop() > 50);
 });
 $(function() {
+    $('.new_service .item .title').on('click', function (e) {
+        $(this).parents('.item').toggleClass('active');
+        $(this).next().slideToggle();
+    });
+
+
+
+
     $('.col h5').on('click', function () {
         $(this).parents('.col').toggleClass('active');
         $(this).next().slideToggle();
