@@ -22,6 +22,9 @@ a{
 .container{
 	width: 100%;
 	padding: 0px 30px;
+	max-width: 1420px;
+	margin-left: auto;
+	margin: auto;
 }
 .mobile_menu_bg{
 	display: none;
@@ -158,6 +161,7 @@ a{
 	}
 	.cart{
 		padding-right: 5px;
+		margin-right: 10px;
 		a{
 			position: relative;
 			span{
@@ -251,6 +255,7 @@ a{
 		}
 		.menu{
 			margin-left: 30px;
+			width: 100%;
 			nav{
 				ul{
 					list-style-type: none;
@@ -258,6 +263,7 @@ a{
 					padding: 0;
 					display: flex;
 					align-items: flex-end;
+					justify-content: space-between;
 					li{
 						a{
 							height: auto;
@@ -3208,6 +3214,106 @@ a{
 					font-weight: normal;
 					font-size: 22px;
 					line-height: 40px;
+				}
+			}
+		}
+	}
+}
+
+.container{
+
+}
+.blogs{
+	.page_iblock{
+		max-width: 325px;
+		&__title{
+			flex-wrap: wrap;
+			h1{
+				margin-bottom: 15px;
+			}
+			p{
+				font-size: 16px;
+				max-width: 210px;
+				line-height: 1.4;
+			}
+		}
+	}
+	&__wrapper{
+		display: flex;
+	}
+	&__body{
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&__item{
+		width: 440px;
+		margin: 0 10px;
+		margin-bottom: 60px;
+		span{
+			font-size: 14px;
+			font-weight: 300;
+			display: block;
+			margin-bottom: 18px;
+		}
+		.images{
+			height: 290px;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			margin-bottom: 20px;
+			a{
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+		}
+		.text{
+			height: 85px;
+			h4{
+				font-weight: 500;
+				font-size: 24px;
+				line-height: 1.2;
+				a{
+					font-weight: 600;
+				}
+			}
+		}
+	}
+	&__detail{
+		max-width: 640px;
+		.category{
+			margin-bottom: 15px;
+			p{
+				font-size: 14px;
+			}
+		}
+		img{
+			width: 100%;
+			height: auto;
+			margin-bottom: 30px;
+		}
+		h2,h3,h4,h5,h6{
+			font-size: 24px;
+			line-height: 1.3;
+			margin-bottom: 20px;
+		}
+		p{
+			font-size: 16px;
+			line-height: 1.4;
+		}
+		.tags{
+			margin-top: 70px;
+			ul{
+				display: flex;
+				flex-wrap: wrap;
+				margin: 0;
+				padding: 0;
+				list-style-type: none;
+				li{
+					margin-right: 5px;
+					a{
+						font-size: 14px;
+					}
 				}
 			}
 		}
