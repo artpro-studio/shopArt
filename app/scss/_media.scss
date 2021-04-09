@@ -21,6 +21,21 @@
     .menu{
       margin-left: -100px;
     }
+    &__bottom{
+      .left{
+        .logo{
+          margin-right: 50px;
+        }
+        .text{
+          .left_text{
+            margin-right: 0;
+          }
+          p{
+            margin-right: 30px;
+          }
+        }
+      }
+    }
   }
 }
 // ≤1200px
@@ -152,6 +167,13 @@
         .text{
           p{
             font-size: 12px;
+          }
+        }
+      }
+      .social{
+        a{
+          img{
+            height: 18px;
           }
         }
       }
@@ -1176,6 +1198,7 @@
         flex-wrap: wrap;
         .logo{
           margin-right: 0;
+          width: 100%;
           img{
             height: 22px;
           }
