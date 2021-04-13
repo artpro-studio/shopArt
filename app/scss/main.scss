@@ -152,8 +152,8 @@ input[type=submit]{
 			a{
 				svg{
 					path{
-						stroke: #a60000;
-						fill: #a60000;
+						stroke: rgb(34, 31, 32);
+						fill: rgb(34, 31, 32);
 					}
 				}
 			}
@@ -169,15 +169,7 @@ input[type=submit]{
 			}
 		}
 	}
-	.like{
-		a{
-			svg{
-				path{
-					fill: rgb(34, 31, 32);
-				}
-			}
-		}
-	}
+
 	.cart{
 		padding-right: 5px;
 		margin-right: 10px;
@@ -1617,7 +1609,8 @@ input[type=submit]{
 							&.active{
 								svg{
 									path{
-										stroke: #a60000;
+										stroke: #fff;
+										fill: #fff;
 									}
 								}
 							}
@@ -1681,6 +1674,15 @@ input[type=submit]{
 					a{
 						margin: 0 3px;
 						transition: .4s all;
+						&.addFavourites{
+							&.active{
+								svg{
+									path{
+										fill: #000;
+									}
+								}
+							}
+						}
 						&:hover{
 							transform: scale(1.2);
 						}
@@ -2503,15 +2505,15 @@ input[type=submit]{
 		display: flex;
 		align-items: center;
 	}
-	&:before {
-		position: absolute;
-		content: '';
-		width: 100%;
-		height: 100%;
-		left: 0;
-		top: 0;
-		background: linear-gradient(90deg, rgba(21, 21, 21, 0.57) 43.65%, rgba(21, 21, 21, 0) 100.08%);
-	}
+	//&:before {
+	//	position: absolute;
+	//	content: '';
+	//	width: 100%;
+	//	height: 100%;
+	//	left: 0;
+	//	top: 0;
+	//	background: linear-gradient(90deg, rgba(21, 21, 21, 0.57) 43.65%, rgba(21, 21, 21, 0) 100.08%);
+	//}
 }
 
 .main-banner__info {
@@ -2991,8 +2993,8 @@ input[type=submit]{
 
 	&__text {
 		font-weight: 300;
-		font-size: 20px;
-		line-height: 26px;
+		font-size: 30px;
+		line-height: 40px;
 		margin-bottom: 35px;
 	}
 
@@ -3393,4 +3395,54 @@ input[type=submit]{
 		}
 	}
 }
+.pages_text {
+	.page_iblock {
+		max-width: 325px;
+
+		&__title {
+			flex-wrap: wrap;
+
+			h1 {
+				margin-bottom: 15px;
+			}
+
+			p {
+				font-size: 16px;
+				max-width: 210px;
+				line-height: 1.4;
+			}
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+	}
+	&__body{
+		max-width: 640px;
+		h2,h3,h4,h5,h6{
+			font-size: 24px;
+			line-height: 1.4;
+			margin-bottom: 35px;
+		}
+		img{
+			margin-bottom: 30px;
+			width: 100%;
+			height: auto;
+		}
+		p{
+			font-style: normal;
+			font-weight: normal;
+			font-size: 16px;
+			line-height: 1.4;
+			margin-bottom: 30px;
+			stroke{
+				font-weight: 300;
+			}
+			b{
+				font-weight: bold;
+			}
+		}
+	}
+}
+
 @import "media"; // Always at the end

@@ -783,6 +783,19 @@
 
 // ≤992px
 @media screen and (max-width:992px){
+  .pages_text{
+    &__body{
+      max-width: 500px;
+      h2,h3,h4,h5,h6{
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+      p{
+        font-size: 16px;
+        margin-bottom: 25px;
+      }
+    }
+  }
   body{
     padding-top: 142px;
   }
@@ -1302,6 +1315,11 @@
 }
 // ≤768px
 @media screen and (max-width:768px){
+  .pages_text{
+    &__wrapper{
+      flex-wrap: wrap;
+    }
+  }
   .blogs{
     .page_iblock{
       max-width: none;
@@ -1473,6 +1491,18 @@
 }
 
 @media screen and (max-width: 650px) {
+  .pages_text{
+    &__body{
+      h2,h3,h4,h5,h6{
+        font-size: 18px;
+        margin-bottom: 25px;
+      }
+      p{
+        font-size: 12px;
+        margin-bottom: 30px;
+      }
+    }
+  }
   .detail__top .slider .preview{
     display: none;
     &.mobile{
