@@ -521,10 +521,10 @@ input[type=submit]{
 			width: 100%;
 			ul{
 				display: flex;
-				justify-content: center;
 				align-items: center;
 				list-style-type: none;
 				width: 100%;
+				padding-left: 205px;
 				li{
 					margin: 0 15px;
 					a{
@@ -2500,6 +2500,14 @@ input[type=submit]{
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
+	position: relative;
+	img{
+		position: absolute;
+		top: 80px;
+		right: 0;
+		height: 345px;
+		width: auto;
+	}
 	.container{
 		height: 100%;
 		display: flex;
