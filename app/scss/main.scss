@@ -286,6 +286,7 @@ input[type=submit]{
 							font-size: 14px;
 							border-bottom: 2px solid #fff;
 							position: relative;
+							text-transform: uppercase;
 							&:before{
 								content: '';
 								width: 15px;
@@ -3452,5 +3453,39 @@ input[type=submit]{
 		}
 	}
 }
-
+.modal{
+	width: 450px;
+	h4{
+		font-size: 30px;
+		font-weight: bold;
+		margin-bottom: 7px;
+	}
+	p{
+		font-size: 18px;
+		font-weight: normal;
+	}
+	.modal__content{
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: 30px;
+		.item{
+			outline: transparent;
+			display: flex;
+			align-items: center;
+			background-color: #efefef;
+			border-radius: 5px;
+			padding: 15px;
+			font-size: 16px;
+			margin-right: 15px;
+			transition: .4s all;
+			&:hover{
+				background-color: #d6d6d6;
+			}
+			img{
+				height: 18px;
+				margin-right: 5px;
+			}
+		}
+	}
+}
 @import "media"; // Always at the end

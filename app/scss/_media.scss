@@ -2934,6 +2934,27 @@
       }
     }
   }
+  .modal{
+    padding: 20px;
+    h4{
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+    p{
+      font-size: 12px;
+    }
+    .modal__content{
+      margin-top: 25px;
+      .item{
+        font-size: 12px;
+        padding: 10px;
+        margin-right: 10px;
+        img{
+          height: 14px;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width:480px) {
